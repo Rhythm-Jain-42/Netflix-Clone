@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  transition: all ease 0.5s;
+  z-index: 99999;
+  overflow-y: scroll;
+}
+
+.modal__card {
+  background-color: #181818;
+  color: #fff;
+  max-width: 880px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: 280px;
+}
+
+.modal__image {
+  width: 100%;
+  height: 70vh;
+  max-height: 460px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.modal__title-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 48px;
+  font-family: "New Tegomin", serif;
+}
+
+.modal__button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  transition: all ease 0.2s;
+  background-color: #fff;
+}
+
+.modal__button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal__rating {
+  color: #65d45c;
+}
+
+.modal__details {
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.modal__details h3 {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.modal__info {
+  width: 100%;
+  height: 40%;
+}
+
+.modal__year,
+.modal__seasons {
+  font-weight: 400;
+}
+
+.modal__description-container {
+  display: flex;
+}
+
+.modal__description {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 90%;
+}
+
+.modal__description p {
+  line-height: 30px;
+  margin-top: 0;
+  margin-right: 30px;
+}
+
+.modal__no-description {
+  color: #ddd;
+  font-style: italic;
+}
+
+.modal__close {
+  display: inline;
+  border-radius: 100%;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  z-index: 9999;
+  background-color: #262121;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+  background-color: #464646;
+}
+
+.material-icons {
+  color: #fff;
+}
+
+.modal__related {
+  margin: 30px 30px 30px 50px;
+}
+
+.modal__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px 25px;
+}
+
+.modal__grid-item {
+  min-height: 220px;
+  border-radius: 7.5px;
+  height: 65vh;
+  max-height: 420px;
+  background-color: #302c2c;
+}
+
+.modal__grid-item:hover {
+  cursor: pointer;
+}
+
+.modal__grid-item:hover .modal__grid-year {
+  opacity: 1;
+}
+
+.modal__grid-img {
+  height: 40%;
+  width: 100%;
+  border-radius: 7.5px;
+  position: relative;
+}
+
+.modal__grid-year {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  opacity: 0;
+  transition: ease 0.25s;
+}
+
+.modal__grid-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__grid-play img {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__grid-info {
+  margin-left: 15px;
+  height: 60%;
+}
+
+.modal__grid-name {
+  margin-top: -10px;
+  margin-right: 10px;
+}
+
+.modal__grid-description p {
+  margin-top: -10px;
+  color: #d2d2d2;
+  font-size: 14px;
+  line-height: 25px;
+  margin-right: 10px;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+  .modal__description {
+    margin-left: 30px;
+  }
+
+  .modal__details {
+    margin-left: 15px;
+  }
+
+  .modal__title-container {
+    left: 30px;
+  }
+
+  .modal__related {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .modal__grid-item {
+    min-height: 400px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .modal__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal__grid-item {
+    height: 80vh;
+  }
+
+  .modal__title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .modal__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modal__grid-item {
+    height: 100vh;
+    max-height: 500px;
+  }
+}
